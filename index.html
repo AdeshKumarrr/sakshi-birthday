@@ -111,27 +111,49 @@ function showSurprisePage(){
 function showCakePage(){
  basePage(
  '<section class="cake-page">'+
- '<h1 class="cake-title">Aaj to tumhara birthday hai chalo cake cut karke celebrate karte hai</h1>'+
+ '<h1 class="cake-title">Aaj tumhara birthday hai chalo cake cut karke celebrate karte hai🥳</h1>'+
  '<div class="cake-stage" id="cakeStage">'+
  '<div class="cake" id="cake">'+
- '<div class="flame"></div><div class="candle"></div><div class="cake-top"></div><div class="cream"></div><div class="drip d1"></div><div class="drip d2"></div><div class="drip d3"></div><div class="cake-base"></div>'+
- '</div></div>'+
- '<p class="cake-hint">Cake par click karke cut karo 🎂</p>'+
- '<div id="birthdayReveal" style="display:none">'+
+ '<div class="flame f1"></div><div class="flame f2"></div><div class="flame f3"></div>'+
+ '<div class="candle c1"></div><div class="candle c2"></div><div class="candle c3"></div>'+
+ '<div class="cake-top"></div><div class="cream"></div><div class="drip d1"></div><div class="drip d2"></div><div class="drip d3"></div><div class="cake-base"></div><div class="cut-line"></div>'+
+ '</div>'+
+ '<div class="knife" id="knife" title="Cake cut karo"><div class="knife-blade"></div><div class="knife-handle"></div></div>'+
+ '</div>'+
+ '<div class="actions"><button class="action" id="blowBtn">Mombatti Bujhao 🕯️</button></div>'+
+ '<p class="knife-label" id="knifeLabel">Pehle mombatti bujhao</p>'+
+ '</section>'
+ );
+ startBirthdayMusic();
+ document.getElementById('blowBtn').onclick=blowCandles;
+}
+function blowCandles(){
+ const cake=document.getElementById('cake'), btn=document.getElementById('blowBtn'), knife=document.getElementById('knife'), label=document.getElementById('knifeLabel');
+ if(!cake||cake.dataset.blown) return;
+ cake.dataset.blown='1';
+ document.querySelectorAll('.flame').forEach(x=>x.classList.add('off'));
+ document.querySelectorAll('.candle').forEach(x=>x.classList.add('off'));
+ btn.textContent='Candle Bujh Gayi ✓';
+ btn.disabled=true;btn.style.opacity='.65';
+ setTimeout(()=>{knife.classList.add('show');label.textContent='Ab chaku par click karke cake cut karo 🔪';knife.onclick=cutCake;},700);
+}
+function cutCake(){
+ const cake=document.getElementById('cake');
+ if(!cake||cake.dataset.cut) return;
+ cake.dataset.cut='1';cake.classList.add('cut');
+ setTimeout(showBirthdayCelebration,650);
+}
+function showBirthdayCelebration(){
+ const music=document.getElementById('birthdayMusic'); if(music) music.remove();
+ app.className='success-screen';
+ app.innerHTML='<div class="confetti"><i></i><i></i><i></i><i></i><i></i><i></i></div>'+
+ '<section class="success-card celebrate">'+
  '<div class="birthday-title">Happy Birthday Sakshi</div>'+
  '<img class="birthday-photo" src="assets/sakshi-selfie.jpg" alt="Sakshi">'+
  '<p class="selfie-copy">Chalo ab iss yaadgaar pal ki ek photo le lete hai😁</p>'+
  '<div class="actions"><button class="action selfie-btn" id="selfieBtn">Selfie</button></div>'+
- '</div></section>'
- );
- document.getElementById('cakeStage').onclick=cutCake;
- startBirthdayMusic();
-}
-function cutCake(){
- const cake=document.getElementById('cake'), stage=document.getElementById('cakeStage');
- if(!cake||cake.classList.contains('cut')) return;
- cake.classList.add('cut');
- setTimeout(()=>{stage.style.height='80px';document.getElementById('birthdayReveal').style.display='block';document.getElementById('selfieBtn').onclick=showSelfiePage;},650);
+ '</section>';
+ document.getElementById('selfieBtn').onclick=showSelfiePage;
 }
 function startBirthdayMusic(){
  const old=document.getElementById('birthdayMusic'); if(old) old.remove();
