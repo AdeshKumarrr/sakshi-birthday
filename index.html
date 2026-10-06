@@ -18,7 +18,7 @@ body:after{width:260px;height:260px;background:#ddd6ff;opacity:.35;bottom:-120px
 h1{font-family:'Playfair Display',serif;font-size:27px;line-height:1.25;margin:0 auto 7px;max-width:340px}
 .sub{font-size:14px;line-height:1.55;color:#756b7d;margin:0 auto 18px;max-width:310px}
 .gifbox{width:190px;height:145px;margin:0 auto 18px;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 10px 28px rgba(84,61,93,.1);display:flex;align-items:center;justify-content:center}
-.gifbox img{width:100%;height:100%;object-fit:cover}
+.gifbox img{width:100%;height:100%;object-fit:contain;display:block}
 .label{font-size:13px;font-weight:600;color:#716675;margin-bottom:9px}
 .dots{display:flex;justify-content:center;gap:8px;margin:0 auto 16px}
 .dot{width:10px;height:10px;border-radius:50%;background:#ddd5df;transition:.2s}
@@ -32,9 +32,9 @@ h1{font-family:'Playfair Display',serif;font-size:27px;line-height:1.25;margin:0
 @keyframes shake{20%{transform:translateX(-7px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(4px)}}
 .success-screen{min-height:100svh;display:grid;place-items:center;padding:22px;position:relative;overflow:hidden}
 .success-card{width:min(100%,390px);padding:32px 22px 26px;text-align:center;border-radius:30px;background:rgba(255,255,255,.78);backdrop-filter:blur(18px);box-shadow:0 24px 70px rgba(89,65,105,.14);animation:cardIn .65s cubic-bezier(.2,.8,.2,1)}
-.success-icon{width:66px;height:66px;margin:0 auto 17px;border-radius:22px;background:linear-gradient(135deg,#8d7698,#756a98);color:#fff;display:grid;place-items:center;font-size:31px;font-weight:700;box-shadow:0 12px 30px rgba(117,106,152,.25);animation:pop .65s .1s both}
+.success-icon{display:none}
 .success-title{font-family:'Playfair Display',serif;font-size:27px;line-height:1.28;margin:0 auto 18px}
-.cow{width:210px;height:155px;object-fit:contain;border-radius:20px;background:#fff;margin:0 auto 18px;box-shadow:0 10px 28px rgba(84,61,93,.1);image-rendering:auto;display:block}.tenor-wrap{width:210px;min-height:210px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center}.tenor-gif-embed{width:210px!important;max-width:210px!important;margin:0 auto!important}
+.cow{width:210px;height:155px;object-fit:contain;border-radius:20px;background:#fff;margin:0 auto 18px;box-shadow:0 10px 28px rgba(84,61,93,.1);image-rendering:auto;display:block}.tenor-wrap{width:210px;min-height:210px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center} .tenor-gif-embed{width:210px!important;max-width:210px!important;margin:0 auto!important}.cake-page{width:min(100%,390px);padding:28px 20px 30px;text-align:center;border-radius:30px;background:rgba(255,255,255,.8);backdrop-filter:blur(18px);box-shadow:0 24px 70px rgba(89,65,105,.14);animation:cardIn .65s cubic-bezier(.2,.8,.2,1)}.cake-title{font-family:'Playfair Display',serif;font-size:25px;line-height:1.3;margin:0 auto 22px}.cake-stage{height:230px;display:grid;place-items:end center;cursor:pointer;position:relative;margin:0 auto 14px}.cake{position:relative;width:170px;height:115px;transition:.5s}.cake-base{position:absolute;left:10px;bottom:0;width:150px;height:74px;border-radius:16px 16px 24px 24px;background:linear-gradient(#f6a6b8,#e87f9c);box-shadow:0 12px 20px rgba(181,96,126,.2)}.cake-top{position:absolute;left:10px;top:27px;width:150px;height:38px;border-radius:50%;background:#ffd7df;box-shadow:inset 0 -8px 0 rgba(255,255,255,.35)}.cream{position:absolute;left:20px;top:55px;width:130px;height:22px;border-radius:0 0 18px 18px;background:#fff}.drip{position:absolute;top:56px;width:16px;height:28px;border-radius:0 0 12px 12px;background:#fff}.d1{left:34px}.d2{left:75px;height:34px}.d3{left:113px}.candle{position:absolute;left:78px;top:-8px;width:14px;height:43px;border-radius:6px;background:repeating-linear-gradient(135deg,#fff 0 6px,#9e7cc1 6px 11px);z-index:3}.flame{position:absolute;left:77px;top:-30px;width:16px;height:25px;border-radius:50% 50% 50% 50%;background:radial-gradient(circle at 50% 65%,#fff4a8 0 25%,#ffbd45 26% 55%,#ff7c4d 56% 100%);filter:drop-shadow(0 0 8px rgba(255,165,65,.55));animation:flicker .65s infinite alternate;z-index:4}@keyframes flicker{to{transform:translateY(-3px) scale(.9) rotate(4deg)}}.cake-hint{font-size:13px;color:#766b7d;margin:0 0 18px}.birthday-title{font-family:'Playfair Display',serif;font-size:42px;line-height:1.08;margin:0 auto 20px;background:linear-gradient(135deg,#a65d7e,#756a98);-webkit-background-clip:text;background-clip:text;color:transparent;animation:riseTitle 1s cubic-bezier(.2,.8,.2,1) both}.birthday-photo{width:min(100%,300px);max-height:370px;object-fit:cover;border-radius:24px;box-shadow:0 18px 45px rgba(80,60,90,.18);animation:photoIn .9s .2s both;margin:0 auto 22px;display:block}.selfie-copy{font-size:15px;line-height:1.55;color:#62586b;margin:0 auto 18px}.selfie-btn{min-height:52px}.flash{position:fixed;inset:0;background:#fff;z-index:20;pointer-events:none;animation:flash .45s ease-out forwards}.camera-frame{position:relative}.camera-frame:after{content:'SELFIE';position:absolute;left:14px;bottom:14px;padding:5px 10px;border-radius:999px;background:rgba(0,0,0,.5);color:#fff;font-size:11px;letter-spacing:1.5px;font-weight:700}.letter-page{width:min(100%,390px);padding:28px 20px 30px;text-align:center;border-radius:30px;background:rgba(255,255,255,.82);backdrop-filter:blur(18px);box-shadow:0 24px 70px rgba(89,65,105,.14);animation:cardIn .65s cubic-bezier(.2,.8,.2,1)}.letter-envelope{width:220px;height:150px;margin:12px auto 20px;position:relative;cursor:pointer;perspective:800px;animation:floatLetter 2.4s ease-in-out infinite}.envelope-body{position:absolute;inset:20px 0 0;border-radius:10px;background:linear-gradient(145deg,#fff,#f3e9f4);box-shadow:0 16px 35px rgba(89,65,105,.18);overflow:hidden}.envelope-flap{position:absolute;left:0;top:20px;width:220px;height:90px;clip-path:polygon(0 0,50% 100%,100% 0);background:linear-gradient(145deg,#e8cde0,#f8eaf3);transform-origin:top;transition:transform .8s cubic-bezier(.2,.8,.2,1);z-index:3}.letter-paper{position:absolute;left:15px;right:15px;top:42px;height:95px;border-radius:8px;background:#fffdf8;box-shadow:0 5px 18px rgba(70,50,70,.12);transition:transform .9s cubic-bezier(.2,.8,.2,1),top .9s;z-index:2}.letter-envelope.open .envelope-flap{transform:rotateX(180deg)}.letter-envelope.open .letter-paper{top:-20px;transform:translateY(-30px)}.letter-lines{padding:18px;color:#8a7185;font-size:11px;line-height:1.8}.letter-note{font-size:14px;color:#766b7d;margin:0 auto 20px}.letter-gift{margin-top:22px;font-size:34px;cursor:pointer;animation:giftBounce 1.2s infinite}.letter-gift-label{font-size:12px;color:#806a86;margin-top:4px}@keyframes riseTitle{0%{opacity:0;transform:translateY(80px) scale(.8)}100%{opacity:1;transform:translateY(0) scale(1)}}@keyframes photoIn{0%{opacity:0;transform:scale(.82) rotate(-3deg)}100%{opacity:1;transform:scale(1) rotate(0)}}@keyframes flash{0%{opacity:0}25%{opacity:1}100%{opacity:0}}@keyframes floatLetter{50%{transform:translateY(-6px)}}@keyframes giftBounce{50%{transform:translateY(-6px) scale(1.05)}}.cut{animation:cutCake .65s forwards}@keyframes cutCake{0%{transform:scale(1)}50%{transform:scale(1.08) rotate(-2deg)}100%{transform:scale(0) rotate(8deg);opacity:0}}
 .question{font-size:15px;line-height:1.55;color:#62586b;margin:0 auto 20px;max-width:320px}
 .actions{display:grid;gap:11px;max-width:300px;margin:auto}
 .action{min-height:52px;border:0;border-radius:17px;font:700 14px 'DM Sans';cursor:pointer;color:#fff;background:linear-gradient(135deg,#92718c,#756a98);box-shadow:0 9px 24px rgba(117,106,152,.2);transition:transform .15s,box-shadow .15s,filter .15s}
@@ -101,12 +101,72 @@ function showNextPage(){
 }
 function showSurprisePage(){
  basePage(
- '<div class="success-icon">🎁</div>'+
  '<h1 class="success-title">Surprise tumhara wait kar raha hai☺️</h1>'+
  '<div class="gifbox"><img src="'+teddyGif+'" alt="Teddy GIF" loading="eager"></div>'+
  '<p class="question">Mai surprise dun aur tum na dekhna chaho aisa kaise ho skta hai☺️</p>'+
  '<div class="actions"><button class="action" id="openSurprise">Open The Surprise</button></div>'
  );
+ document.getElementById('openSurprise').onclick=showCakePage;
+}
+function showCakePage(){
+ basePage(
+ '<section class="cake-page">'+
+ '<h1 class="cake-title">Aaj to tumhara birthday hai chalo cake cut karke celebrate karte hai</h1>'+
+ '<div class="cake-stage" id="cakeStage">'+
+ '<div class="cake" id="cake">'+
+ '<div class="flame"></div><div class="candle"></div><div class="cake-top"></div><div class="cream"></div><div class="drip d1"></div><div class="drip d2"></div><div class="drip d3"></div><div class="cake-base"></div>'+
+ '</div></div>'+
+ '<p class="cake-hint">Cake par click karke cut karo 🎂</p>'+
+ '<div id="birthdayReveal" style="display:none">'+
+ '<div class="birthday-title">Happy Birthday Sakshi</div>'+
+ '<img class="birthday-photo" src="assets/sakshi-selfie.jpg" alt="Sakshi">'+
+ '<p class="selfie-copy">Chalo ab iss yaadgaar pal ki ek photo le lete hai😁</p>'+
+ '<div class="actions"><button class="action selfie-btn" id="selfieBtn">Selfie</button></div>'+
+ '</div></section>'
+ );
+ document.getElementById('cakeStage').onclick=cutCake;
+ startBirthdayMusic();
+}
+function cutCake(){
+ const cake=document.getElementById('cake'), stage=document.getElementById('cakeStage');
+ if(!cake||cake.classList.contains('cut')) return;
+ cake.classList.add('cut');
+ setTimeout(()=>{stage.style.height='80px';document.getElementById('birthdayReveal').style.display='block';document.getElementById('selfieBtn').onclick=showSelfiePage;},650);
+}
+function startBirthdayMusic(){
+ const old=document.getElementById('birthdayMusic'); if(old) old.remove();
+ const iframe=document.createElement('iframe');
+ iframe.id='birthdayMusic';iframe.src='https://www.youtube.com/embed/2i3wIST4pBA?start=6&autoplay=1&loop=1&playlist=2i3wIST4pBA&controls=0&rel=0';
+ iframe.allow='autoplay; encrypted-media';iframe.style.cssText='position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;left:-10px;bottom:-10px;border:0';
+ document.body.appendChild(iframe);
+}
+function showSelfiePage(){
+ const flash=document.createElement('div');flash.className='flash';document.body.appendChild(flash);
+ setTimeout(()=>flash.remove(),450);
+ basePage(
+ '<h1 class="success-title">Woww😲... Apne birthday per kitni pyari lag rhi ho😁</h1>'+
+ '<div class="camera-frame"><img class="birthday-photo" src="assets/sakshi-selfie.jpg" alt="Sakshi selfie"></div>'+
+ '<p class="selfie-copy">Chalo ab mere andaaj me mai tumhe wish kar deta hun next per click karo aur letter ko open karo..</p>'+
+ '<div class="actions"><button class="action" id="nextLetter">Next</button></div>'
+ );
+ document.getElementById('nextLetter').onclick=showLetterPage;
+}
+function showLetterPage(){
+ basePage(
+ '<section class="letter-page">'+
+ '<h1 class="success-title">Tumhare liye ek special letter 💌</h1>'+
+ '<div class="letter-envelope" id="letterEnvelope">'+
+ '<div class="letter-body envelope-body"></div>'+
+ '<div class="letter-paper"><div class="letter-lines">Yahan tumhare liye ek special message hoga...<br>Thoda sa wait karo, letter open karo☺️</div></div>'+
+ '<div class="envelope-flap"></div>'+
+ '</div>'+
+ '<p class="letter-note">Letter par click karo aur dekho andar kya hai☺️</p>'+
+ '<div class="letter-gift" id="letterGift">🎁</div><div class="letter-gift-label">Last surprise ke liye gift par click karna</div>'+
+ '</section>'
+ );
+ document.getElementById('letterEnvelope').onclick=function(){
+   this.classList.toggle('open');
+ };
 }
 function showNoPage(){
  basePage(
