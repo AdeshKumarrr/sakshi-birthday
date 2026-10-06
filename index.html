@@ -229,6 +229,11 @@ h1{font-family:'Playfair Display',serif;font-size:27px;line-height:1.25;margin:0
 .sakshi-album-title{font-family:'Playfair Display',serif!important;font-size:clamp(30px,6vw,52px)!important;line-height:1.08!important;margin:0 auto 7px!important;background:linear-gradient(135deg,#a65d7e,#756a98)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;animation:albumTitleIn .9s cubic-bezier(.2,.8,.2,1) both,albumTitleGlow 2.8s 1s ease-in-out infinite alternate!important}
 .sakshi-album-subtitle{font-size:13px!important;color:#756b7d!important;margin:0 auto 22px!important;animation:letterContentIn .7s .12s both!important}
 .sakshi-photo-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:22px!important;max-width:820px!important;margin:0 auto!important}
+.sakshi-album-footer{margin:30px auto 4px!important;text-align:center!important;animation:albumFooterIn .9s .7s cubic-bezier(.2,.8,.2,1) both!important}
+.sakshi-album-footer .grow-line{font-family:Pacifico,'Playfair Display',serif!important;font-size:clamp(24px,4vw,38px)!important;line-height:1.15!important;color:#756a98!important;text-shadow:0 6px 22px rgba(117,106,152,.20)!important;animation:albumFooterGlow 2.8s 1.4s ease-in-out infinite alternate!important}
+.sakshi-album-footer .happy-line{margin-top:8px!important;font-family:'Baloo 2','DM Sans',sans-serif!important;font-size:clamp(16px,2.4vw,22px)!important;font-weight:700!important;color:#806a86!important;line-height:1.35!important}
+@keyframes albumFooterIn{0%{opacity:0;transform:translateY(22px) scale(.96)}100%{opacity:1;transform:none}}
+@keyframes albumFooterGlow{0%{text-shadow:0 6px 22px rgba(117,106,152,.18);transform:translateY(0)}100%{text-shadow:0 8px 30px rgba(166,93,126,.34);transform:translateY(-2px)}}
 .sakshi-photo-card{position:relative!important;padding:10px 10px 34px!important;border-radius:8px!important;background:linear-gradient(145deg,#fffdf9,#fff4e8)!important;box-shadow:0 18px 38px rgba(75,54,85,.18),0 0 0 1px rgba(255,255,255,.78)!important;transform:rotate(var(--r))!important;animation:albumPhotoIn .75s cubic-bezier(.2,.8,.2,1) both,albumPhotoFloat 4.6s ease-in-out 1s infinite!important;overflow:hidden!important}
 .sakshi-photo-card:nth-child(1){--r:-3deg;animation-delay:.08s,1.2s}.sakshi-photo-card:nth-child(2){--r:2.5deg;animation-delay:.16s,1.6s}.sakshi-photo-card:nth-child(3){--r:-2deg;animation-delay:.24s,2s}.sakshi-photo-card:nth-child(4){--r:2.7deg;animation-delay:.32s,2.4s}.sakshi-photo-card:nth-child(5){--r:-2.7deg;animation-delay:.40s,1.7s}.sakshi-photo-card:nth-child(6){--r:2deg;animation-delay:.48s,2.2s}.sakshi-photo-card:nth-child(7){--r:-1.8deg;animation-delay:.56s,2.7s}
 .sakshi-photo-card:hover{transform:rotate(0deg) scale(1.035)!important;z-index:4!important;box-shadow:0 24px 48px rgba(75,54,85,.24),0 0 0 3px rgba(166,133,174,.20)!important}
@@ -867,8 +872,8 @@ function showFinalAlbumPage(){
   '</div>'+
   '<h1 class="sakshi-album-title">Happy Birthday Sakshi</h1>'+ 
   '<p class="sakshi-album-subtitle">Tumhari yaadon ka ek chhota sa album</p>'+ 
-  '<div class="sakshi-photo-grid">'+photos+'</div>'+ 
-  ''+
+  '<div class="sakshi-photo-grid">'+photos+'</div>'+
+  '<div class="sakshi-album-footer"><div class="grow-line">Keep Growing, Keep Shining</div><div class="happy-line">Aise hi khush rho Mast raho☺️</div></div>'+
   '</section>'
  );
  startFinalAlbumMusic();
