@@ -18,7 +18,6 @@ body:after{width:260px;height:260px;background:#ddd6ff;opacity:.35;bottom:-120px
 h1{font-family:'Playfair Display',serif;font-size:27px;line-height:1.25;margin:0 auto 7px;max-width:340px}
 .sub{font-size:14px;line-height:1.55;color:#756b7d;margin:0 auto 18px;max-width:310px}
 .gifbox{width:190px;min-height:145px;margin:0 auto 18px;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 10px 28px rgba(84,61,93,.1);display:flex;align-items:center;justify-content:center}
-.tenor-gif-embed{width:100%!important;max-width:100%!important}
 .label{font-size:13px;font-weight:600;color:#716675;margin-bottom:9px}
 .dots{display:flex;justify-content:center;gap:8px;margin:0 auto 16px}
 .dot{width:10px;height:10px;border-radius:50%;background:#ddd5df;transition:.2s}
@@ -37,12 +36,10 @@ h1{font-family:'Playfair Display',serif;font-size:27px;line-height:1.25;margin:0
 <body>
 <main class="wrap">
 <section class="card" id="card">
-<div class="kicker">A little surprise awaits</div>
+<div class="kicker">A little surprise awaits... lekin usse pahle confirm karo</div>
 <h1>Kahin tum chor to nhi... mere gifts lootne aaye ho🙄</h1>
 <p class="sub">Kyoki ye gifts ek special person ke liye hai☺️</p>
-<div class="gifbox">
-<div class="tenor-gif-embed" data-postid="13809659" data-share-method="host" data-aspect-ratio="1.04348" data-width="100%"><a href="https://tenor.com/view/robber-stealing-thief-robbery-money-thief-gif-13809659">Robber Stealing Sticker</a> from <a href="https://tenor.com/search/robber-stickers">Robber Stickers</a></div>
-</div>
+<div class="gifbox"><img src="https://media.tenor.com/wL72VlC1_toAAAAj/robber-stealing.gif" alt="Robber GIF"></div>
 <div class="label">Passcode enter karo</div>
 <div class="dots" id="dots"></div>
 <div class="keypad">
@@ -59,12 +56,11 @@ const pass='0610';let value='';
 const dots=document.getElementById('dots'),msg=document.getElementById('msg'),card=document.getElementById('card');
 function render(){dots.innerHTML='';for(let i=0;i<4;i++){const d=document.createElement('span');d.className='dot'+(i<value.length?' on':'');dots.appendChild(d)}}
 function wrong(){msg.textContent='Hmm... passcode sahi nahi hai 😌';card.classList.remove('shake');void card.offsetWidth;card.classList.add('shake');value='';render()}
-document.querySelectorAll('[data-n]').forEach(b=>b.onclick=()=>{if(value.length<4){value+=b.dataset.n;render();if(value.length===4)setTimeout(check,180)}})
+document.querySelectorAll('[data-n]').forEach(b=>b.onclick=()=>{if(value.length<4){value+=b.dataset.n;render()}})
 document.getElementById('clear').onclick=()=>{value='';msg.textContent='';render()}
 document.getElementById('enter').onclick=check;
 function check(){if(value===pass){msg.style.color='#6b7d67';msg.textContent='Access granted...';setTimeout(()=>{document.body.innerHTML='<div style="min-height:100svh;display:grid;place-items:center;padding:24px;text-align:center;font-family:DM Sans,sans-serif;background:linear-gradient(145deg,#fff8f1,#f7efff,#eef7ff)"><div><h2 style="font-family:Playfair Display,serif;font-size:30px;margin:0 0 10px">Perfect! ✨</h2><p style="color:#756b7d">Surprise unlocked.</p></div></div>'},450)}else wrong()}
 render();
 </script>
-<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 </body>
 </html>
